@@ -17,5 +17,5 @@ jobs:
         with:
           go-version: '1.22'
 
-      - name: Gorce Failure
-        run: (exit 1)
+      - name: Print Golang version
+        run: go version
