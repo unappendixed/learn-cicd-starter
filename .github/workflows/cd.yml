@@ -12,6 +12,8 @@ jobs:
 
       - name: Setup Go toolchain
         uses: actions/setup-go@v5
+        with: 
+          go-version: '1.22'
 
       - name: Build
         run: ./scripts/buildprod.sh
