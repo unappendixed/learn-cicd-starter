@@ -28,3 +28,6 @@ jobs:
 
       - name: 'Deploy image'
         run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/skilled-index-425616-q0/notely-ar-repo/notely .'
+
+      - name: 'Deploy to Cloud Run'
+        run: 'gcloud run deploy notely --image us-central1-docker.pkg.dev/skilled-index-425616-q0/notely-ar-repo/notely --region us-central1 --allow-unauthenticated --project skilled-index-425616-q0 --max-instances=4'
