@@ -24,7 +24,7 @@ jobs:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
       - name: 'Set up Cloud SDK'
-        uses: 'google-github-actions/setup-cgloud@v2'
+        uses: 'google-github-actions/setup-gcloud@v2'
 
       - name: 'Deploy image'
         run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/skilled-index-425616-q0/notely-ar-repo/notely .'
